@@ -340,21 +340,3 @@ function sortListVivino() {
     }
   }
 }
-
-
-//Script to close cookie alert box when clicked
-function closeCookie() {
-  var box = document.getElementById("cookieBox");
-  box.style.display = "none";
-}
-
-
-
-
-//Variables
-var slideContent1, slideContent2, slideContent3, slideContent4;
-
-slideContent1 = document.getElementById("slideContent1");
-slideContent2 = document.getElementById("slideContent2");
-//var slideContent = document.getElementById("slideContent3");
-//var slideContent = document.getElementById("slideContent4");
