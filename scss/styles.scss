@@ -1,0 +1,951 @@
+
+// varibales import
+@import "variables.scss";
+
+
+// produkt side stylings
+@import "udvalg.scss";
+@import "produkt-side.scss";
+
+
+// andre sider sider stylings
+@import "historie.scss";
+@import "om-os.scss";
+@import "footer.scss";
+
+//Styling til inspiration blogs.
+@import "inspiration.scss";
+
+//Custom snipcart cart CSS
+@import "snipcart-custom-css.scss";
+
+
+//OTHER STYLING
+
+//Styling for slideshow on landingpage
+@import "slideshow.scss";
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background-color: $primary-background;
+  font-family: $primary-font;
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+a{
+ text-decoration: none;
+ color: $primary-text;
+
+}
+a:hover{
+  color: $amber;
+  background-color: $primary-background;
+}
+p{
+  margin-left: 0;
+  margin-right: 0;
+}
+h2{
+  font-size: 1.2em;
+  text-align: center;
+}
+.box-shadow{
+  box-shadow: $box-shadow;
+}
+.amber{
+  color: $amber;
+}
+.header-bottom-border{
+  display: flex;
+  margin: 0 auto 30px;
+  width: 50px;
+  border-bottom: 2px solid $amber;
+}
+.devider{
+  display: flex;
+  margin: 20px auto;
+  width: 50px;
+  border-bottom: 2px solid $amber;
+}
+.sale-price{
+  text-decoration: line-through;
+  color: $secondary-text;
+  margin: 0 7px;
+  font-size: .7em;
+}
+.sale-price-2{
+  text-decoration: line-through;
+  color: $secondary-text;
+  margin: 0;
+  font-size: .8em;
+}
+
+
+
+
+//Facebook chat
+.fb_dialog_content iframe{
+  bottom: 100px;
+}
+.fb-customerchat{
+  bottom: 110px;
+}
+
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  z-index: 10;
+  background-color: $primary-background;
+
+}
+#navSection{
+  background-color: $primary-background;
+}
+.top-info{
+  display: none;
+  margin: 0;
+  background-color: #ededed;
+  color: $secondary-text;
+  text-align: left;
+  display: block;
+  width: 100%;
+  font-size: .65em;
+  img{
+    height: 8px;
+    margin-right: 10px;
+  }
+}.top-info p{
+  color: black;
+  margin: 0 0 6px 5px;
+}
+.topInfoHeightFix{
+  margin-bottom: 14vh;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+  position: fixed;
+  top: 28vh;
+  width: 100%;
+  z-index: 10;
+  color: $primary-text;
+  font-family: $primary-header;
+  background-color: $primary-background;
+}
+.topnav #myLinks2{
+  display: none;
+  position: fixed;
+  top: 12vh;
+  width: 100%;
+  z-index: 10;
+  color: $primary-text;
+  font-family: $primary-header;
+  background-color: $primary-background;
+}
+
+//Sticky styling for header
+.sticky {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  text-decoration: none;
+  display: block;
+}
+
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 19vh;
+  background-color: white;
+  margin-right: 25px;
+}
+
+//Changing possision of shoppingcart and burgermenu to fit sticky navBar
+#shoppingcart{
+  top: 4vh;
+}
+#burgerMenu{
+  top: 4vh;
+}
+
+/* Add a grey background color on mouse-over */
+#myLinks a:hover {
+  border: none;
+}
+#myLinks a{
+  color: $primary-text;
+  padding: 15px 20px;
+
+}
+#myLinks a:last-child{
+  padding-bottom: 30px;
+}
+/* Repeat code to style when scrolled */
+#myLinks2 a:hover {
+  border: none;
+}
+#myLinks2 a{
+  color: $primary-text;
+  padding: 15px 20px;
+
+}
+#myLinks2 a:last-child{
+  padding-bottom: 30px;
+}
+
+
+/* Style the active link (or home/logo) */
+.nav-section {
+  display: flex;
+  flex-direction: column;
+
+}
+.active{
+  height: 13vh;
+  margin: 0 auto;
+
+
+}
+.active img{
+  height: 17vh;
+  display: flex;
+  margin: -2vh auto 0 auto;
+}
+
+.fa-bars{
+  color: $amber;
+  vertical-align: middle;
+  transform: scale(1.4)
+}
+.shopping-cart{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-left: 15px;
+  left: 0;
+  top: 19vh;
+  background-color: $primary-background;
+  button{
+    background-color: $primary-background;
+  }
+}.shopping-cart img{
+  height: 30px;
+  width: 30px;
+}
+
+.snipcart-items-count{
+  font-weight: bold;
+  position: relative;
+  right: 7px;
+  bottom: 5px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 1px 5px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----Top pick section ------
+*/
+.top-pick-section{
+  display: flex;
+  flex-direction: column;
+    position: relative;
+    z-index: 2;
+    background-color: $primary-background;
+    height: 55vh;
+}
+
+.favoritter-header{
+  margin: 3vh auto 2vh;
+}
+
+// styling for alle top picks
+.top-picks{
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  width: 100%;
+  margin: 0 auto;
+
+  section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: .7em;
+    a{
+      margin: 0;
+      padding: 0;
+    }
+    a img{
+      height: 130px;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+    h4{
+      margin-bottom: 0;
+      font-family: $primary-header;
+      font-weight: bold;
+    }
+    h5{
+      margin: auto 0 0 0;
+      font-size: 1em;
+      font-family: $primary-header;
+      span{
+        text-decoration: line-through;
+        margin-right: 3px;
+        color: $secondary-text;
+        font-size: .7em;
+      }
+    }
+  }
+
+}
+
+
+.se-orangevin{
+  text-align: center;
+  font-size: .8em;
+  width: 10rem;
+  border: 1px solid black;
+  padding: 3px;
+  color: black;
+  margin: 10px auto;
+  border-radius: 3px;
+}.se-orangevin:hover{
+  background-color: $button-hover;
+}
+
+.wine-name-favoritter{
+
+}.wine-name-favoritter:hover{
+  background-color: $primary-background;
+}
+
+/* show more wines button */
+.flere-vine{
+  text-align: center;
+  font-size: .9em;
+  font-weight: bold;
+  width: 70%;
+  border: 1px solid black;
+  padding: 5px;
+  color: black;
+  margin: 5vh auto 5vh;
+  border-radius: 3px;
+}.flere-vine:hover{
+  background-color: $button-hover;
+}
+
+
+
+
+
+
+// hvad er orangevin?
+.hvad-er-orangevin{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.hvad-er-orangevin section{
+  margin: 0 auto 3vh;
+  padding: 5px;
+  max-width: 800px;
+}
+
+//Intro tekst om OrangeWineCellar
+.intro-div{
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0;
+}
+
+.intro-tekst{
+  margin: 10px auto 10px;
+  padding: 0 10px 0 30px;
+  font-size: 0.8em;
+}
+
+.intro-billede{
+  width: 100%;
+}
+
+
+/* INSPIRATION section */
+.inspiration-header{
+ margin: 7vh auto 2vh;
+}
+
+.inspiration{
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 0 auto 50px;
+  max-width: 1000px;
+}
+
+.inspiration a div{
+  max-width: 280px;
+  height: 250px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  border-radius: 5px;
+}.inspiration a div h3{
+  font-size: 1.8em;
+  line-height: 1;
+  font-family: $primary-header;
+  color: $primary-background;
+  margin: auto 5px 5px;
+}
+
+
+.inspiration-3{
+  background-image: url("../images/inspiration/sådan-drikker-man-orangevin.jpg");
+}
+
+.inspiration-1{
+  background-image: url("../images/inspiration/valg-af-orangevin.jpg");
+}
+
+.find-orangevin{
+  text-align: center;
+  font-size: .7em;
+  width: 270px;
+  border: 1px solid black;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  color: black;
+  margin: 0 auto 10vh;
+  border-radius: 3px;
+}
+.find-orangevin:hover{
+  background-color: $button-hover;
+}
+
+
+
+// Instagram feed:
+iframe{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 40px;
+  width: 100%;
+  border:0;
+  overflow:hidden;
+}
+
+
+
+
+
+
+
+/* FOOTER SECTION XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+footer{
+  padding-top: 5vh;
+  background-color: $secondary-background;
+  text-align: center;
+}
+.footer h2{
+  margin: .83em 0;
+}
+.footer-header img{
+  height: 225px;
+  margin-left: -20px;
+}
+.footer-nav{
+  font-size: .7em;
+  letter-spacing: 2px;
+  display: flex;
+}
+.footer-nav ul{
+  margin: 0 auto;
+  width: 80%;
+}
+.footer-nav ul li:first-child{
+  margin-top: .5rem;
+}
+.footer-nav ul li{
+  margin: 0;
+  margin-bottom: 1.5rem;
+  color: $primary-text;
+}
+.footer-nav ul li:last-child{
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-contact{
+  display: flex;
+  flex-direction: column;
+}
+.footer-contact-option{
+  width: 60%;
+  margin: 2rem auto;
+}
+.footer-contact-option img{
+  width: 50px;
+}
+.footer-contact-option p{
+  font-size: .7em;
+  color: #696969;
+}
+.footer-contact-option h3{
+  font-size: .8em;
+}
+
+.social-footer{
+  background-color: $tertiary-background;
+  color: $secondary-background;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+.social-links svg{
+  height: 40px;
+  margin: 0 10px;
+  fill: white;
+  margin: 0 10px;
+}
+
+.page-not-found{
+  margin: 10vh auto;
+  max-width: 80%;
+
+  text-align: center;
+  p{
+    margin: 40px 0 80px;
+  }
+  a{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }a:hover{
+    border: 1px solid $amber;
+  }
+}
+
+
+
+
+//OVERWRITE STYLING FOR SHOPPING CART (SnipCart)
+.snipcart-overwrite #snipcart-header #snipcart-title {
+    color: #50bcd0;
+    background: url('/logo/orangewinecellar.png') no-repeat 0 center;
+    padding-left: 60px;
+}
+
+
+
+/* breakpoint for medium screens */
+@media (min-width: 321px) {
+
+  .topnav #myLinks{
+    top: 25.5vh;
+  }
+  .topnav #myLinks2{
+    top: 13vh;
+  }
+  #shoppingcart{
+    top: 4.5vh;
+  }
+  #burgerMenu{
+    top: 4.5vh;
+  }
+
+  .top-picks{
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+
+
+
+
+  //burger menu stylings
+  .topnav a.icon{
+    top: 17.5vh;
+  }
+
+  //Shoppingcart stylings
+  .shopping-cart{
+    top: 17.5vh;
+  }
+
+  //styling for "inspiration" siderne
+  .inspiration a div{
+    max-width: none;
+    min-width: 300px;
+  }
+
+  /*  */
+  .footer-contact-option h3{
+    font-size: 1.2em;
+  }
+
+
+
+
+
+}
+
+
+
+
+/* breakpoint for larger screens */
+@media (min-width: 768px) {
+
+  .topnav #myLinks{
+    top: 16vh;
+  }
+  .topnav #myLinks2{
+    top: 12.5vh;
+  }
+
+
+  /* Main styling */
+
+
+
+  // Top info bar styling
+  .top-info{
+    max-height: 5vh;
+    padding: 2px 0 2px;
+    div{
+      display: flex;
+      flex-direction: row;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    p{
+      max-width: 175px;
+      margin: 0 auto;
+      position: relative;
+    }
+    img{
+      position: absolute;
+      top: 3px;
+      left: -15px;
+    }
+  }
+  .topInfoHeightFix{
+    margin-bottom: 13vh;
+  }
+
+  .topnav a.icon{
+    top: 8.5vh;
+  }
+  .shopping-cart{
+    top: 8.5vh;
+  }
+
+
+
+
+  .top-picks{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 0;
+    width: 70%;
+    section{
+      font-size: .9em;
+      a img{
+        height: 250px;
+      }
+      h4{
+        margin-top: 0;
+      }
+    }
+  }
+  .favoritter-header{
+    margin-top: 1.5vh;
+  }
+  .flere-vine{
+    width: 250px;
+    margin-top: 3vh;
+  }
+
+
+
+
+
+// hvad er orangevin?
+  .hvad-er-orange-vin{
+    height: 70vh;
+  }
+
+
+
+
+
+  /* Footer styling */
+  .footer-nav ul li{
+    display: inline;
+    margin: 0 5px;
+  }
+  .footer-nav{
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid gray;
+    width: 80%;
+    margin: 1.5rem auto;
+  }
+
+  .footer-contact{
+    flex-direction: row;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+
+
+
+
+  /* Top navigation styling */
+  .topInfoHeightFix{
+    margin-bottom: 10vh;
+  }
+
+  .topnav a.icon{
+    display: none;
+  }
+  .topnav #myLinks{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10rem;
+    top: 7vh;
+    width: 50%;
+  }
+  .topnav #myLinks a{
+    padding: 0 10px;
+  }
+  .topnav #myLinks a:first-child{
+    margin-left: auto;
+  }
+  .topnav #myLinks2{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10rem;
+    top: 5vh;
+    width: 50%;
+    a{
+      padding: 0 10px;
+    }
+    a:first-child{
+      margin-left: auto;
+    }
+  }
+  .active{
+    margin: 0 auto 0 30px;
+    height: 10vh;
+    img{
+      height:13vh;
+      margin-top: -1.5vh;
+    }
+  }
+  .shopping-cart{
+    left: auto;
+    right: 3rem;
+    top: 7vh;
+  }
+
+  // Main styling
+
+
+  // top picks SECTION
+  .top-picks{
+    width: 80%;
+    section{
+      font-size: 1.1em;
+      a img{
+        height: 350px;
+      }
+    }
+  }
+
+
+
+
+
+
+  //intro tekst og billede
+    .intro-div{
+      flex-direction: row;
+      margin: 10vh 0;
+    }
+
+    .intro-header{
+      margin-top: 0;
+      text-align: left;
+      margin-left: 12px;
+    }
+
+    .intro-tekst{
+      margin: 10px 2px 2px;
+      width: 100%;
+      padding: 0 10px 0 10px;
+
+    }
+
+    .intro-billede{
+      width: 50%;
+      height: 50%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+@media (min-width: 1025px){
+  .topInfoHeightFix{
+    margin-bottom: 12vh;
+  }
+
+  .active{
+    margin: 0 auto 0 3rem;
+    height: 12vh;
+    img{
+      height:16vh;
+      margin-top: -2vh;
+    }
+  }
+
+
+
+
+
+
+  .favoritter-header{
+    margin: 10vh auto 5vh;
+    z-index: 2000;
+  }
+
+  .top-pick-section{
+    height: 90vh;
+  }
+
+  .top-picks{
+    width: 60%;
+    height: 450px;
+    section{
+      position: relative;
+
+      img{
+        height: 400px;
+      }
+      h4, h5{
+        width: 100%;
+        text-align: center;
+      }
+      h4{
+        position: absolute;
+        bottom: 50px;
+      }
+      h5{
+        position: absolute;
+        bottom: 0px;
+      }
+      a img:hover{
+        transform: scale(1.15);
+        transition: .5s;
+       }
+    }
+  }
+
+
+
+  .intro-header{
+    font-size: 1.3em;
+  }
+
+  .topnav #myLinks{
+    top: 9vh;
+  }
+  .topnav #myLinks2{
+    top: 5vh;
+  }
+  .shopping-cart{
+    top: 8vh;
+  }
+
+
+
+
+}
+@media (min-width: 1900px){
+
+
+
+
+
+  .inspiration{
+    max-width: 1600px;
+  }
+  .inspiration a div{
+    height: 400px;
+  }
+
+
+  .intro-tekst{
+    font-size: 1.2em;
+  }
+  .intro-header{
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+
+
+
+
+
+}

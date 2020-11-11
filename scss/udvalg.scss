@@ -1,0 +1,581 @@
+
+// varibales import
+@import "variables.scss";
+
+
+
+
+.udvalg-header{
+  background-image: url("../images/udvalg/udvalg-header.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 16vh;
+  text-align: center;
+  color: $primary-background;
+  font-family: $primary-header;
+  padding-top: 3vh;
+  font-size: .6em;
+  p{
+    margin: 0;
+    font-weight: bold;
+  }
+}
+
+
+//sorting and search
+.sorting{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.search-bar{
+  width: 180px;
+  margin: 35px 5px 10px auto;
+  padding: 5px;
+  border: 1px solid $secondary-background-darker;
+  border-radius: 1px;
+  background-color: white;
+}
+
+
+
+
+//Dropdown menu to select filters XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+/* Dropdown Button */
+.dropbtn {
+  padding: 12px 42px 12px 12px;
+  z-index: 4;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 35px auto 10px 5px;
+  letter-spacing: 1px;
+  border: 1px solid $secondary-background-darker;
+  border-radius: 1px;
+  background-color: $primary-background;
+}.sorter-img{
+  margin-left: 0px;
+  position: absolute;
+  top: 45px;
+  right: 3px;
+  z-index: 1;
+  pointer-events: none;
+}
+#sortArrow{
+  transition: .5s;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  // background-color: $amber-lighter;
+  outline: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $secondary-background-lighter;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content button {
+  color: black;
+  padding: 12px 13px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content button:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+//Styling for filtering filter options
+.showFiltering{
+  margin-top: 0;
+}
+#showFilter{
+  margin-top: 0;
+}
+.filterImg{
+  margin-left: 0px;
+  position: relative;
+  top: 6px;
+  right: 35px;
+  z-index: 1;
+  pointer-events: none;
+  //transform: rotate(180deg);
+  transition: .5s;
+}
+
+#filtering{
+  display: none;
+  flex-direction: column;
+  h3{
+    text-align: left;
+  }
+  div{
+
+    div{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-row-gap: 10px;
+      margin-right: 20px;
+      div{
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+
+
+// main SECTION
+.orangevineHTML{
+
+}
+#myUL{
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  grid-gap: 5px;
+  padding: 20px 5px;
+  margin-top: 0px;
+
+}
+
+#lagtIKurv{
+  width: 300px;
+  height: 90px;
+  position: fixed;
+  background-color: $primary-background;
+  top: -140px;
+  z-index: 6;
+  left: 50%;
+  margin-left: -150px; //150px = halvdelen af bredden.
+  box-shadow: $box-shadow;
+  border-radius: 5px;
+  border: 1px solid $primary-border;
+  background-image: url("../logo/favicon.png");
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: right;
+  font-size: 0.8em;
+  section{
+    padding: 10px 20px 20px 20px;
+
+  }
+  a{
+    margin-left: 30px;
+    border-bottom: 1px solid $primary-border;
+  }
+}
+
+.products{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  position: relative;
+
+  padding-bottom: 60px;
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px 15px 0;
+  position: relative;
+
+
+}
+
+.item-img{
+  margin: 0 auto;
+}
+.item-img img{
+  height: 200px;
+  margin: 0 auto;
+}
+.hover-img{
+  width: 100%;
+  transition: .8s;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 5;
+}
+.hover-img img{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  border-radius: 3px;
+}
+
+
+
+.flag{
+  height: 8px;
+  margin-right: 3px;
+}
+
+.vivino-oversigt{
+  transform: scale(.50);
+}
+
+.item-text{
+  font-size: .6em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.item-text h2{
+  font-size: .95em;
+}
+.item-text h3, .item-text h3 a{
+margin: 0;
+color: $secondary-text;
+font-size: .95em;
+}
+.item-text h3 a:hover{
+  color: $amber;
+}
+.item-text h4{
+  margin: 0;
+  font-size: 1.1em;
+  font-family: $primary-header;
+  span{
+    border: none;
+  }
+  section{
+    font-size: .75em;
+    color: $tertiary-text;
+  }
+}
+
+
+
+.tilbud-label{
+  margin: 0;
+  padding: 8px 2px;
+  font-size: .6em;
+  position: absolute;
+  top: 0;
+  right: 16px;
+  color: $primary-background;
+  font-family: $primary-header;
+  border-radius: 50%;
+   background-color: $amber-lighter2;
+   z-index: 4;
+}
+
+
+.item-text button{
+  margin-top: -10px;
+  font-size: 1em;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+//404 ingen orangevin fundet
+.noWine {
+  max-width: 90%;
+  display: none;
+  flex-direction: column;
+  margin: -70px auto 50px;
+  h2, p{
+    text-align: center;
+    margin: 30px auto;
+  }
+  h2{
+    font-size: 1.7em;
+    color: $amber;
+  }
+}
+
+
+
+
+
+
+/* breakpoint for medium screens (larger phones or iphones)*/
+@media (min-width: 321px) {
+
+
+  /* main section */
+  .search-bar{
+    width: 250px;
+  }
+  #myUL{
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .vivino-oversigt{
+    transform: scale(.60);
+  }
+
+  .item-text h2{
+    font-size: 1.1em;
+  }
+  .item-text h3, .item-text h3 a{
+  font-size: 1em;
+  }
+  .item-text button{ //Læg i kurv knap
+    font-size: 1.1em;
+    padding: 10px 20px;
+  }
+
+
+
+
+}
+
+
+/* breakpoint for larger screens (ipads fx.) */
+@media (min-width: 768px) {
+
+// header SECTION
+.udvalg-header{
+  font-size: 1.5em;
+  height: 24vh;
+}
+
+  /* main section */
+
+  .products{
+    max-width: 1100px;
+    margin: 0 auto;
+
+
+  }
+
+
+  #myUL{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+    padding: 0 10px;
+  }
+
+  .item{
+    font-size: 1.2em;
+    margin: 0 auto;
+  }
+  .item-text p{
+    font-size: .9em;
+
+  }
+  .tilbud-label{
+    padding: 14px 5px;
+    font-size: .85em;
+  }
+
+
+  .flag{
+    height: 11px;
+  }
+
+
+
+
+}
+
+
+
+/* breakpoint for desktop screens */
+@media (min-width: 1024px) {
+
+// header SECTION
+
+
+
+  /* main section */
+  .dropdown-content{
+    right: 17px;
+  }
+  .sorting{
+    flex-direction: row;
+  }
+  .search-bar{
+    width: 500px;
+    margin: 35px auto 0 10px;
+  }
+  .dropbtn{
+    margin: 35px 5px 0 auto;
+  }
+
+  #showFilter{
+    margin: 10px 0 0 5px;
+  }
+  #filtering{
+    margin-left: 10px;
+    h3{
+    }
+    div{
+      div{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        div{
+        }
+      }
+    }
+  }
+
+  .item-img{
+    img{
+      height: 275px;
+    }
+  }
+
+  #myUL{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 15px;
+    margin-top: 5rem;
+  }
+  .item-text button{
+    margin: -15px auto;
+  }
+
+  .vivino-oversigt{
+    transform: scale(.7);
+  }
+
+
+  #lagtIKurv{
+    width: 500px;
+    height: 120px;
+    top: -140px;
+    left: 50%;
+    margin-left: -300px; //150px = halvdelen af bredden.
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: right;
+    font-size: 1.1em;
+    section{
+      margin-left: 50px;
+    }
+
+  }
+
+
+}
+
+// ultra wide screens
+@media (min-width: 1025px){
+
+  // header SECTION
+  .udvalg-header{
+
+    height: 40vh;
+  }
+
+  #showFilter{
+    display: none;
+  }
+  #filtering{
+    display: flex;
+    margin-left: 10px;
+    position: absolute;
+    top: 16vh;
+    left: 0;
+    width: 20%;
+    h3{
+    }
+    div{
+      div{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-row-gap: 10px;
+        margin-right: 10px;
+        div{
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  /* main section */
+  .products{
+    max-width: 1400px;
+    min-height: 1700px;
+  }
+
+  #myUL{
+    grid-template-columns: repeat(auto-fit, minmax(350px, 26%));
+    grid-gap: 100px 10px;
+    margin-left: 17%;
+
+    li{
+
+    }
+  }
+
+  .item-img{
+    img{
+      height: 350px;
+    }
+  }
+  .hover-img{
+    display: block;
+  }
+  .hover-img:hover{
+    opacity: 1;
+
+  }
+
+  .item-text {
+    button{
+      margin-top: -10px;
+      padding: 10px 45px;
+    }
+    h2{
+      font-size: 1.8em;
+    }
+    h3{
+      font-size: 1.5em;
+    }
+    h4{
+      margin-bottom: -5px;
+      //left: 70px;
+      //bottom: 38px;
+      font-size: 1.5em;
+      span{
+        border: none;
+      }
+    }
+    button{
+      font-size: 1.4em;
+    }
+  }
+  .vivino-oversigt{
+    //right: 45px;
+    //bottom: 22px;
+    transform: scale(.9);
+  }
+
+
+}
+
+@media (min-width: 1400px){
+  .flag{
+    height: 11px;
+  }
+}

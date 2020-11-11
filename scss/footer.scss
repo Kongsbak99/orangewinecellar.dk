@@ -1,0 +1,32 @@
+
+
+// variables
+@import "variables.scss";
+
+
+
+
+
+.footer-info{
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: 20px auto;
+}
+.footer-info div{
+  margin-top: 20px;
+
+}
+.footer-info h2, .footer-info h1{
+  text-align: left;
+}
+.footer-info h1{
+  margin: 20px auto 40px;
+  font-size: 2.5em;
+  color: $amber;
+  font-family: $primary-header;
+}
+.footer-info h2{
+  margin-top: 60px;
+}
