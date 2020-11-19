@@ -3,7 +3,17 @@
 @import "variables.scss";
 
 
-
+.udsolgt{
+  position: absolute;
+  top: -4%;
+  left: 5%;
+  background: #ffa230;
+  color: $primary-background;
+  font-family: $primary-header;
+  font-size: .9em;
+  padding: 5px 15px;
+  border-radius: 2px 2px 20px 2px;
+}
 
 .udvalg-header{
   background-image: url("../images/udvalg/udvalg-header.jpg");
@@ -403,6 +413,10 @@ font-size: .95em;
 
 /* breakpoint for desktop screens */
 @media (min-width: 1024px) {
+  .udsolgt{
+    top: -3%;
+
+  }
 
 // header SECTION
 
