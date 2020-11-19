@@ -13,6 +13,7 @@
   font-size: .9em;
   padding: 5px 15px;
   border-radius: 2px 2px 20px 2px;
+  z-index: 5;
 }
 
 .udvalg-header{
@@ -311,6 +312,7 @@ font-size: .95em;
   display: none;
   flex-direction: column;
   margin: -70px auto 50px;
+
   h2, p{
     text-align: center;
     margin: 30px auto;
@@ -583,6 +585,11 @@ font-size: .95em;
     //right: 45px;
     //bottom: 22px;
     transform: scale(.9);
+  }
+  .noWine{
+    position: absolute;
+    top: 75%;
+    left: 35%;
   }
 
 
